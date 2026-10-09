@@ -43,36 +43,36 @@ private:
         std::string info;
         if (money < SILVER)
         {
-            info = Acore::StringFormat("{} sold for {} copper.", name, copper);
+            info = Acore::StringFormat("{} продано за {} меди.", name, copper);
         }
         else if (money < GOLD)
         {
             if (copper > 0)
             {
-                info = Acore::StringFormat("{} sold for {} silver and {} copper.", name, silver, copper);
+                info = Acore::StringFormat("{} продано за {} серебра и {} меди.", name, silver, copper);
             }
             else
             {
-                info = Acore::StringFormat("{} sold for {} silver.", name, silver);
+                info = Acore::StringFormat("{} продано за {} серебра.", name, silver);
             }
         }
         else
         {
             if (copper > 0 && silver > 0)
             {
-                info = Acore::StringFormat("{} sold for {} gold, {} silver and {} copper.", name, gold, silver, copper);
+                info = Acore::StringFormat("{} продано за {} золота, {} серебра и {} меди.", name, gold, silver, copper);
             }
             else if (copper > 0)
             {
-                info = Acore::StringFormat("{} sold for {} gold and {} copper.", name, gold, copper);
+                info = Acore::StringFormat("{} продано за {} золота и {} меди.", name, gold, copper);
             }
             else if (silver > 0)
             {
-                info = Acore::StringFormat("{} sold for {} gold and {} silver.", name, gold, silver);
+                info = Acore::StringFormat("{} продано за {} золота и {} серебра.", name, gold, silver);
             }
             else
             {
-                info = Acore::StringFormat("{} sold for {} gold.", name, gold);
+                info = Acore::StringFormat("{} продано за {} золота.", name, gold);
             }
         }
 
